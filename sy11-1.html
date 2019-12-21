@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#wrap1,#wrap2{
+	padding:20px;
+	width:200px;
+	height:30px;
+	background-color:rgba(255,204,255,1);
+	text-align:center;
+	color:rgba(255,255,255,1);
+}
+#lb{
+	height:20px;
+}
+</style>
+</head>
+
+<body>
+<div id="wrap1">我是wrap1</div>
+<div id="lb"></div>
+<div id="wrap2">我是wrap2</div>
+<script>
+     let oWrap1 = document.getElementById("wrap1"),
+	      oWrap2 = document.getElementById("wrap2");
+		  oWrap1.onmouseenter = function(){
+			  oWrap2.innerHTML = "鼠标移入了wrap1";
+		  }
+		  oWrap1.onmouseleave = function(){
+			  oWrap2.innerHTML = "鼠标离开了wrap1";
+		  }
+		  oWrap2.onmouseenter = function(){
+			  oWrap1.innerHTML = "鼠标移入了wrap2";
+		  }
+		  oWrap2.onmouseleave = function(){
+			  oWrap1.innerHTML = "鼠标离开了wrap2";
+		  }
+</script>
+</body>
+</html>

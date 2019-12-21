@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+#wrap{
+	position:relative;
+	width:600px;
+	height:395px;
+	margin:auto;
+	border:2px solid #000;
+	cursor:pointer;
+}
+#wrap img{
+	position:absolute;
+	display:none;
+}
+#wrap .on{
+	display:block;
+}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+     <img id="img1" class="on" src="images/jb1.jpg" alt="">
+     <img id="img2" src="images/jb2.jpg" alt="">
+</div>
+<script>
+     let oImg1 = document.getElementById("img1"),
+	      oImg2 = document.getElementById("img2");
+		  oImg1.onclick = function(){
+			  oImg1.className = "";
+			  oImg2.className = "on";
+		  }
+		  oImg2.onclick = function(){
+			  oImg2.className = "";
+			  oImg1.className = "on";
+		  }
+</script>
+</body>
+</html>
